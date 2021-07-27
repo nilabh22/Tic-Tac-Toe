@@ -1,10 +1,10 @@
-##### THE MAIN GAME ###############
-
 theBoard = {'7': ' ', '8': ' ', '9': ' ',
             '4': ' ', '5': ' ', '6': ' ',
             '1': ' ', '2': ' ', '3': ' '}
 
+# I created a board here manually
 
+# I will noe define a function to printed the visual of the board
 def printBoard(board):
     print(board['7'] + '|' + board['8'] + '|' + board['9'])
     print('-+-+-')
@@ -14,7 +14,7 @@ def printBoard(board):
 
 printBoard(theBoard)
 
-
+# The game starts
 def game():
     playerX = 'X'
     count = 0
@@ -32,19 +32,19 @@ def game():
             print("That place is already filled.\nMove to which place?")
             continue
 
-# Now we will check if player X or O has won,for every move after 5 moves.
+# Now i have checked if player X or O has won,for every move after 5 moves.
         if count >= 5:
-            if theBoard['7'] == theBoard['8'] == theBoard['9'] != ' ': # across the top
+            if theBoard['7'] == theBoard['8'] == theBoard['9'] != ' ': # It will check across the top
                 printBoard(theBoard)
                 print("\nGame Over.\n")
                 print(" **** " +playerX + " won. ****")
                 break
-            elif theBoard['4'] == theBoard['5'] == theBoard['6'] != ' ': # across the middle
+            elif theBoard['4'] == theBoard['5'] == theBoard['6'] != ' ': # It will check across the middle
                 printBoard(theBoard)
                 print("\nGame Over.\n")
                 print(" **** " +playerX + " won. ****")
                 break
-            elif theBoard['1'] == theBoard['2'] == theBoard['3'] != ' ': # across the bottom
+            elif theBoard['1'] == theBoard['2'] == theBoard['3'] != ' ': # It will check across the bottom
                 printBoard(theBoard)
                 print("\nGame Over.\n")
                 print(" **** " +playerX + " won. ****")
@@ -54,39 +54,39 @@ def game():
                 print("\nGame Over.\n")
                 print(" **** " +playerX + " won. ****")
                 break
-            elif theBoard['2'] == theBoard['5'] == theBoard['8'] != ' ': # down the middle
+            elif theBoard['2'] == theBoard['5'] == theBoard['8'] != ' ': # It will check down the middle
                 printBoard(theBoard)
                 print("\nGame Over.\n")
                 print(" **** " +playerX + " won. ****")
                 break
-            elif theBoard['3'] == theBoard['6'] == theBoard['9'] != ' ': # down the right side
+            elif theBoard['3'] == theBoard['6'] == theBoard['9'] != ' ': # It will check down the right side
                 printBoard(theBoard)
                 print("\nGame Over.\n")
                 print(" **** " +playerX + " won. ****")
                 break
-            elif theBoard['7'] == theBoard['5'] == theBoard['3'] != ' ': # diagonal
+            elif theBoard['7'] == theBoard['5'] == theBoard['3'] != ' ': # It will check diagonal 1
                 printBoard(theBoard)
                 print("\nGame Over.\n")
                 print(" **** " +playerX + " won. ****")
                 break
-            elif theBoard['1'] == theBoard['5'] == theBoard['9'] != ' ': # diagonal
+            elif theBoard['1'] == theBoard['5'] == theBoard['9'] != ' ': # It will check diagonal 2
                 printBoard(theBoard)
                 print("\nGame Over.\n")
                 print(" **** " +playerX + " won. ****")
                 break
 
-        # If neither X nor O wins and the board is full, we'll declare the result as 'tie'.
+        # If neither X nor O wins and the board is full, i've declared the result as 'tie'
         if count == 9:
             print("\nGame Over.\n")
             print("It's a Tie!!")
 
-        # we have to change the player after every move.
+        # Code to change the player after every move
         if playerX =='X':
             playerX = 'O'
         else:
             playerX = 'X'
 
-#  We ask player if he wants to play again ######
+### We ask player if he wants to play again or not ###
 
 board_keys = []
 
